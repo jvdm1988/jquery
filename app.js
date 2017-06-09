@@ -54,7 +54,18 @@ $(document).ready(function (){
   var currentCount = 0;
 
   $("#increase-btn").click(function() {
+
     currentCount += 1;
     $("#count-tag").html(currentCount);
+
+    if (currentCount > 45) {
+      $("#hot-tag").css("font-size", "25px");
+      $("#hot-tag").css ("font-style", "italic");
+      $("#hot-tag").css ("color", "yellow");
+    }
+
+    else if (currentCount > 15) {
+      $("#hot-tag").addClass("warm");
+  }
   });
 });
